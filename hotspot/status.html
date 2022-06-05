@@ -15,6 +15,8 @@ $(endif)
     <div class="ie-fixMinHeight">
         <div class="main">
             <div class="wrap">
+                <h1 style="font-family: monospace;">SCH Wifi státusz</h1>  
+                </br></br> 
                 <h1>Csatlakozva</h1>  
                 <h1>Szia, $(username)!</h1>              
 
@@ -26,19 +28,20 @@ $(endif)
 				$(else)
 					<tr><td>Csatlakozva</td><td>$(uptime)</td></tr>
 				$(endif)
-				$(if blocked == 'yes')
-					<tr><td>Állapot</td><td>
-				<a href="$(link-advert)" target="hotspot_advert">Advertisement required</a></td>
-					</tr>
-				$(elif refresh-timeout)
+				$(if refresh-timeout)
 					<tr><td>Frissítési időköz</td><td>$(refresh-timeout)</td></tr>
 				$(endif)
 				</table>
 				
-				<form name="login" action="https://hotspot.example.com/logout.php" method="post" >
+				<form name="login" action="https://hotspot.example.com/login.php" method="post" >
                     <input type="hidden" name="mac" value="$(mac)" />
+                    <input type="hidden" name="logout" value="true" />
                     <input type="submit" value="Kijelentkezés" />
                 </form>
+                </br>
+                <h1>Információk</h1>
+                <p class="info">A hálózat VPN kapcsolaton keresztül kapcsolódik az internetre. A BME-s oldalak egyelőre nem érhetőek el a hálózaton. Javítani fogjuk. Addig is bocsi és enjoy!</p>
+                <p class="info" style="width:100%; text-align: right; margin-top:-20px;">Üdv, <a class="info" href="https://i.kym-cdn.com/entries/icons/original/000/028/367/cover1.jpg">az üzemeltetők</a></p>
             </div>
         </div>
     </div>

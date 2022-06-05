@@ -1,9 +1,9 @@
 $(if http-status == 302)Hotspot redirect$(endif)
-$(if http-header == "Location")https://hotspot.example.com/logout.php?server=$(server-address)&mac=$(mac)$(endif)
+$(if http-header == "Location")https://hotspot.example.com/login.php?mac=$(mac)&logout=true$(endif)
 <html>
 <head>
 <title>...</title>
-<meta http-equiv="refresh" content="0; url=https://hotspot.example.com/logout.php?server=$(server-address)&mac=$(mac)">
+<meta http-equiv="refresh" content="0; url=https://hotspot.example.com/logout.php?mac=$(mac)&logout=true">
 <meta http-equiv="pragma" content="no-cache">
 <meta http-equiv="expires" content="-1">
 </head>

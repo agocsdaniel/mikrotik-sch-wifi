@@ -22,7 +22,7 @@
     <div class="ie-fixMinHeight">
         <div class="main">
             <div class="wrap animated fadeIn">
-                <form name="login" action="https://hotspot.example.com/login.php" method="post" >
+                <form name="login" action="https://hotspot.example.com/login.php" method="post" style=" text-align: center;">
                     <input type="hidden" name="dst" value="$(link-orig)" />
                     <input type="hidden" name="mac" value="$(mac)" />
                     <input type="hidden" name="server" value="$(server-address)" />
@@ -33,12 +33,14 @@
 
 
                     <p class="info $(if error)alert$(endif)">
-                        A hálózat használatához jelentkezz be Auth.SCH-val
+                    	Szia, pajti!</br>
+                        A hálózat használatához jelentkezz be Auth.SCH-val.
                     </p>
-                    <input type="submit" value="Bejelentkezés" />
+                    <!--<input type="submit" value="Bejelentkezés" />-->
+                    <input type="image" value="Bejelentkezés" src="img/login_sch.png" style="max-width:40%;"/>
 
                 </form>
-                <p class="info bt">Powered by MikroTik RouterOS</p>
+                <p class="info bt">Powered by MikroTik RouterOS</br>We are not affiliated with things called KSZK.</p>
 
             </div>
         </div>
